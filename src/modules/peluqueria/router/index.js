@@ -11,7 +11,11 @@ export default{
             path: ':id',
             name: 'mascota',
             component: () => import(/* webpackChunkName: "peluqueria-mascota" */ '@/modules/peluqueria/views/mascotaView.vue'),
-            
+            props: ( route ) => {
+                return {
+                    id: route.params.id
+                }
+            }
         }
     ]
 }

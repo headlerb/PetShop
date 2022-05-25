@@ -5,51 +5,38 @@ html{
 *, *::before, *::after{
     box-sizing: inherit;
 }
-
 body{
     margin:0;
     padding:0;
+    background: #eaecee;    
     line-height: 1.6;
-    font-family: 'Noto Sans JP', sans-serif;
-    
+    font-family: 'Noto Sans JP', sans-serif;    
 }
-
 a{
     text-decoration: none;
     display: inline-block;
     color: rgb(134, 132, 132);
 }
-
 img{
     width:80%;
     height: auto;
 }
-
-nav, .servicios, .presentacion, .footer-content{
-    width: 100%;
-    margin:auto;
-}
-
 // Variables
 $font-p: 1.2rem;
 $font-h1: 2.5rem;
 $font-h2: 2.2rem;
 $font-h3: 1.2rem;
-
 p{
     font-size:$font-p;
     color: rgb(60, 60, 60);
 }
-
 h2{
     font-size: $font-h2;
 }
-
 h3{
     font-size: $font-h3;
     font-weight:lighter;
 }
-
 .btn{
     border: none;
     border-radius:2px;
@@ -65,9 +52,6 @@ h3{
     }
     
 }
-
-
-
 .btn-principal{
     @extend .btn;
     color: #fff;
@@ -78,7 +62,22 @@ h3{
     @extend .btn;
     background-color:rgb(134, 132, 132);
 }
-
+.btn-busqueda{
+    @extend .btn;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #6495ED;
+    color: #fff;
+}
+input, select {
+    width: 48%;
+    padding: 12px 20px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 // USO DE MIXINS EN SASS;
 
 @mixin caja-flex($principal, $wrap){

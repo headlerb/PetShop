@@ -1,12 +1,9 @@
 
 <template>
-<div class="wrapper">
-  <section class="servicios">   
+  <section class="DivPrincipal">   
     <div >
-              <h1>Home </h1>
-        </div>  
+      <h3>Home </h3>
+    </div>  
   </section>
-</div>
-
 </template>
 

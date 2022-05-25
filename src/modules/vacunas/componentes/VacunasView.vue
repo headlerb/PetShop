@@ -1,9 +1,8 @@
 <template>
-<div class="wrapper">
-  <section class="servicios">   
+  <section class="DivPrincipal">   
      <div class="titulo-servicios"> 
-        <h1>Modulo Turnos Peluqueria</h1>
+        <h3>Modulo Turnos Peluqueria</h3>
     </div> 
   </section>
-</div>
+
 </template>

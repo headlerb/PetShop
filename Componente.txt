@@ -1,0 +1,42 @@
+<!-- Comment     
+        <div class="div-busqueda">
+              <input type="text"  v-model="IdMascota"           
+                  placeholder="Ingrese Mascota"> 
+              <input type="text"  v-model="NombrePropietario"
+                  placeholder="Ingrese propietario">
+              <button class="btn-principal" v-on:click="addQuote">Agregar</button>
+          </div> 
+        
+      <div class="div-list" >      
+          <div   v-for="( Turnos,index) in filterTurnos" :key="index"
+            @click="$router.push({ name: 'mascota',params : {id: Turnos.id }})" >
+            <div>
+                <span>Mascota : {{ Turnos.id }} - Titulo :  {{ Turnos.title }}</span>
+            </div>
+          </div>     
+      </div >-->
+
+
+   <!-- Comment   filterTurnos:function(){
+        if (this.busqueda=='') return this.TurnosActivos
+        return this.TurnosActivos.filter((Turnos)  => {
+          return Turnos.title.match(this.busqueda)
+      })
+    }-->
+
+    const TurnosActivos2 = [
+        { id: 'Samy', propietario: 'Ariel Bedoya',active:true },
+        { id: 'Micky', propietario: 'Andres Sepulveda' ,active:true },  
+        { id: 'lola', propietario: 'Juan Sepulveda' ,active:true },   
+    ]
+    console.log(TurnosActivos2)
+
+
+//https://jsonplaceholder.typicode.com/users/1/todos
+
+    async created() {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      this.TurnosActivos=response.data
+      //console.log(response.data)
+    },
+mport axios from 'axios';

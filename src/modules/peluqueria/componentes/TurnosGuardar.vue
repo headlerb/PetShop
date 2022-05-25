@@ -1,7 +1,9 @@
 <template>
-
-     <button class="btn-secundario">{{ name }}</button>
- 
+    <button class="btn btn-principal"
+    @click="$emit('on:click')"
+    
+    >{{ name }}       
+    </button> 
 </template>
 <script>
 export default {
@@ -9,7 +11,7 @@ export default {
   props: {   
     name:{
       type: String,
-      default:"Salir"
+      default:"Nuevo Turno"
     }
   }
 }

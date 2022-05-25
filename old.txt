@@ -1,0 +1,59 @@
+<template>
+  <h1>Turnos de Peluqueria</h1>
+   <div class="pel-container" v-for="( {id,propietario},index) in TurnosActivos" :key="index"
+        @click="$router.push({ name: 'mascota',params : {id: id }})"
+  >
+    <div>
+          <span>Mascota : {{ id }} - Propietario :  {{ propietario }}</span>
+      </div>
+    </div>
+  <div>
+    <div>
+        <input type="text"  v-model="newQuote"
+          v-on:keypress.enter="addQuote"
+        placeholder="Ingrese Mascota">
+    </div>
+   <hr>
+     <div>
+          <span>Mascota : {{ id }} - Propietario :  {{ propietario }}</span>
+      </div>
+    <div class="divTurnos">      
+      <TurnosMascotas
+         />
+      <hr>
+    </div>
+  </div> 
+</template>
+<script>
+import { defineAsyncComponent } from 'vue'
+  export default {
+    
+    components: {
+      TurnosMascotas: defineAsyncComponent(() => import('./TurnosMascotas.vue'))
+      }
+  }
+</script>
+<style>
+.divTurnos { 
+  padding: 17px 0px; 
+  height: 200px;
+	width: 100%;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	overflow-y: scroll;
+  }
+</style>
+
+<script>
+import { defineAsyncComponent } from 'vue'
+  export default {
+    
+    components: {
+      TurnosMascotas: defineAsyncComponent(() => import('./TurnosMascotas.vue'))
+      }
+  }
+</script>
+
+        bottom: 20px;
+        height: 50px;
+           right: 20px;

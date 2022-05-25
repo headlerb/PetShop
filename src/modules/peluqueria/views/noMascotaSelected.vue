@@ -1,7 +1,7 @@
 <template>
     <div  >
-        <h2 >Debe Seleccionar una mascota</h2>
-          <TurnosSalir />
+        <h3 >Debe Seleccionar un turno</h3>
+          <NuevoTurno @on:click="NuevoTurno" name="Agregar un turno" />
     </div>
 
 
@@ -12,7 +12,12 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
     components: {
-        TurnosSalir: defineAsyncComponent(() => import('../componentes/TurnosGuardar.vue'))
-    }
+        NuevoTurno: defineAsyncComponent(() => import('../componentes/TurnosGuardar.vue'))
+    },
+    methods:{
+        NuevoTurno(){
+            this.$router.push({ name: 'mascota',params : {id: 'new' }}) 
+        }
+    } 
 }
 </script>

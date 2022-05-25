@@ -16,7 +16,6 @@ const routes = [
   {
     path: '/vacunas',
     name: 'vacunas',    
-    //component: () => import(/* webpackChunkName: "about" */ '../views/VacunasView.vue')
     component: () => import(/* webpackChunkName: "vacunas" */ '../modules/vacunas/componentes/VacunasView.vue')
   },
   {
@@ -27,8 +26,7 @@ const routes = [
    // name: 'peluqueria',
   //  component: () => import(/* webpackChunkName: "peluqueria" */ '@/modules/peluqueria/layouts/PeluqueriaLayout.vue'),
       ...peluqueriaRouter     
-  }
-  
+  }  
 ]
 
 const router = createRouter({

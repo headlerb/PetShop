@@ -1,11 +1,10 @@
 import { createStore } from 'vuex'
 
-import Pet from '../modules/peluqueria/store/pet'
+import Petmodule from '../modules/peluqueria/store/pet/index.js'
 const store = createStore({
     modules: {
-        Pet
+        Petmodule
     }
    
 })
-
 export default store
