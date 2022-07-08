@@ -6,7 +6,7 @@ import peluqueriaRouter  from '../modules/peluqueria/router'
 import noPagefound from  '../modules/shared/pages/noPagefound'
 
 
-//console.log(peluqueriaRouter)
+
 const routes = [
   {
     path: '/',
